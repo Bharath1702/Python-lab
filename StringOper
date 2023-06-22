@@ -1,0 +1,17 @@
+S=input("enter A Sentence your aaka")
+w=d=u=l=0
+l_w = S.split()
+w=len(l_w)
+for c in S:
+    if c.isdigit():
+        d=d+1
+    elif c.isupper():
+        u=u+1
+    elif c.islower():
+        l=l+1
+print("Number of words in words is ",w,"your aaka")
+print("Number of Digits is ",d," your aaka")
+print("Number of UpperCase in the sentence is ",u," your aaka")
+print("Number of LowerCase in the sentence is ",l," your aaka")
+
+        
