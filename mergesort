@@ -1,0 +1,53 @@
+def mergesort(LSB):
+    if len(LSB)>1:
+        mid = len(LSB) //2
+        left_half=LSB[:mid]
+        right_half=LSB[:mid]
+        mergesort(left_half)
+        mergesort(right_half)
+        i=j=k=0
+        
+        while i<len(left_half) and j<(right_half):
+            if left_half[i] < right_half[j]:
+                LSB[k]=left_half[i]
+                i+=1
+            else:
+                LSB[k]=right_half[j]
+                j+=1
+                i+=1
+                while i<len(left_half):
+                    LSB[k]=left_half[i]
+                    i+=1
+                    k+=1
+                    while j<len(right_half):
+                        LSB[k]=right_half[j]
+                        j+=1
+                        k+=1
+                        return LSB
+def insertionsort(arr):
+    for j in range(1,len(arr)):
+        key = arr[i]
+        j=i-1
+        while j>=0 and key<arr[j]:
+            arr[j+1]=arr[j]
+            arr[j+1]=key
+            mylist=[]
+            for i in range(10):
+                mylist.append(random.randint(0,999))
+                print("\n unsorted array")
+                print(mylist)
+                print("sorting using insertion sort")
+                insertionsort(mylist)
+                print(mylist)
+                mylist=[]
+                for i in range (10):
+                    mylist.append(random.randint(0,999))
+                    print("\n unsorted array")
+                    print(mylist)
+                    print("sorting using merge sort")
+                    mergesort(mylist)
+                    print(mylist)
+                
+                
+        
+                    
